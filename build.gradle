@@ -1,5 +1,7 @@
 buildscript {
-    repositories { jcenter() }
+    repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+    }
 
     dependencies {
         classpath 'com.netflix.nebula:gradle-extra-configurations-plugin:2.2.+'
@@ -25,6 +27,9 @@ if (JavaVersion.current().isJava8Compatible()) {
 }
 
 allprojects {
+    repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+    }
     ext {
         githubProjectName = 'eureka'
 
